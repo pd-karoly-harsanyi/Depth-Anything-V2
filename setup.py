@@ -1,14 +1,14 @@
-from setuptools import find_packages, setup
+import setuptools
+import os
+
+local_path = os.path.dirname(os.path.abspath(__file__))
 
 with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
-setup(
+setuptools.setup(
     name="metric_depth",
     version="0.0.1",
-    python_requires=">=3.9",
-    packages=find_packages(exclude=["assets", "depth_anything_v2"]),
-    install_requires=requirements,
-    include_package_data=True,
-    zip_safe=False,
+    packages=setuptools.find_packages(),
+    install_requires=requirements
 )
