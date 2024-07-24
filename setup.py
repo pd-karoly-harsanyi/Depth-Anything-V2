@@ -4,7 +4,7 @@ with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
 setup(
-    name="depth_anything_v2_metric_depth",
+    name="metric_depth",
     version="0.0.1",
     packages=find_packages(exclude=["assets", "depth_anything_v2"]),
     python_requires=">=3.9",
